@@ -61,6 +61,22 @@ User Interfaces를 만들기 위한 JS 라이브러리
 - Hooks(함수들)의 목적은 값의 재사용이 아니라 로직의 재사용을 위한 것
 - 결론: 재사용 가능한 함수(대개 use로 시작함 useState, useEffect, useRef 등)
 
+## 5. 프로젝트 구조
+
+1. .yarn: yarn을 실행하는 데 필요한 모듈
+2. node_modules: npm을 이용해서 설치하는 라이브러리
+3. pnp: yarn에서 도입한 프로젝트 버전정보, PC 설치정보 등
+4. yarn.lock: 라이브러리 버전 파일 정보
+5. public: static한 resources
+
+   5.1. index.html: react app에서 사용하는 head정보, root요소
+
+   5.2. manifest.json: pwa에 필요한 정보들
+
+   5.3. robots.txt: 배포했을 때, 크롤링하는 로봇들에게 사이트에 대한 정보 명시
+
+6. src:
+
 React 공식 사이트: https://reactjs.org/
 
 React 베타 문서: https://beta.reactjs.org/
