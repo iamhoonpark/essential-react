@@ -75,7 +75,38 @@ User Interfaces를 만들기 위한 JS 라이브러리
 
    5.3. robots.txt: 배포했을 때, 크롤링하는 로봇들에게 사이트에 대한 정보 명시
 
-6. src:
+6. src: 동적으로 코드를 작성하는 곳
+
+## 6. Tools
+
+### 6.1. 중요한 툴
+
+    1. Webpack: 코드를 잘 포장해서 사용자들에게 배포하는 모듈 번들러
+    2. ESLint: 코드를 올바르게 작성하고 있는지 체크
+    3. Jest: Unit 테스트를 작성하고 테스팅을 할 수 있는 프레임워크
+    4. PostCSS: JS로 CSS를 변환하는 툴
+
+### 6.2. 브라우저 준비 및 익스텐션
+
+#### 6.2.1 크롬 확장프로그램
+
+    1. React Developer Tools: 개발자 도구에서 컴포넌트 단위로 요소 확인 가능
+
+#### 6.2.2. VSCode Extention
+
+    1. Material Theme: 현재 사용하고 있는 테마(dark)
+    2. Material Icon Theme: 현재 사용하고 있는 아이콘
+    3. Auto Import: 자동으로 import
+    4. Prettier - Code formatter: 코드를 이쁘게 포맷
+    5. CSS Modules: 나중에 PostCSS 쓸때 유용
+
+#### 6.2.3. 기타 HTML&CSS 관련 익스텐션
+
+    1. IntelliSense for CSS class names in HTML
+    2. HTML to CSS autocompletion
+    3. HTML CSS Support
+    4. CSS Peek
+    5. Auto Rename Tag
 
 React 공식 사이트: https://reactjs.org/
 
