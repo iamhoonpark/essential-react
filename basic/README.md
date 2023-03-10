@@ -1,9 +1,10 @@
 # React
 
-- React 공식 사이트: https://reactjs.org/
-- React 베타 문서: https://beta.reactjs.org/
-- Create React App: https://create-react-app.dev/
-- HTML을 JSX로 변환: https://transform.tools/html-to-jsx
+- React 공식 사이트 : https://reactjs.org/
+- React 베타 문서 : https://beta.reactjs.org/
+- Create React App : https://create-react-app.dev/
+- HTML을 JSX로 변환 : https://transform.tools/html-to-jsx
+- Box Shadow CSS : https://cssgenerator.org/box-shadow-css-generator.html
 
 <hr/>
 
