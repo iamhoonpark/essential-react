@@ -1,6 +1,7 @@
 <details>
 <summary>1. 리액트(React)</summary>
 <div markdown="1">
+
 ## 리액트
 - UI를 표기·보여주고나서 이벤트에 반응
   (Renders UI and responds to(Reacts to) events)
@@ -42,6 +43,7 @@
 <details>
 <summary>ETC</summary>
 <div markdown="2">
+
 | Plugin | URL |
 | ------ | ------ |
 | React 공식사이트 | https://reactjs.org/ |
