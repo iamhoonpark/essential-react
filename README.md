@@ -38,3 +38,14 @@
     - 그렇다고 리액트가 완벽하기 때문에 개발자가 코드를 막 짜면 안되고, 컴포넌트를 효율적으로 만들어나가야 함
   </div>
 </details>
+
+<details>
+  <summary>ETC</summary>
+  <div markdown="1"> 
+    - React 공식 사이트 : https://reactjs.org/
+    - React 베타 문서   : https://beta.reactjs.org/
+    - Create React App : https://create-react-app.dev/
+    - HTML을 JSX로 변환 : https://transform.tools/html-to-jsx
+    - Box Shadow CSS   : https://cssgenerator.org/box-shadow-css-generator.html
+  </div>
+</details>
