@@ -58,17 +58,19 @@
 | Plugin | URL |
 | ------ | ------ |
 | VS Code | https://code.visualstudio.com/download |
-| 맥터미널 | https://iterm2.com |
-| 윈도우터미널 | https://gist.github.com/kevin-smets/8568070 |
+| Terminal for Mac | https://iterm2.com |
+| Terminal for Win | https://gist.github.com/kevin-smets/8568070 |
 | NodeJS | https://nodejs.org/en/ |
 | Git | https://git-scm.com/downloads |
 
-#### 참고용 커맨드
-> node -v
-> npm -v
-> git --version
-> corepack enable
-> yarn -v
+```sh
+## 사용한 커맨드
+node -v
+npm -v
+git --version
+corepack enable
+yarn -v
+```
 </div>
 </details>
 
