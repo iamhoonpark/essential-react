@@ -17,7 +17,7 @@
 - 사용자가 웹 어플리케이션에 접속했을 때, 즉각적으로 html을 보여주는 것이 아니라, 우리가 작성한 코드 js뿐만 아니라 React 라이브러리도 함께 다운받아서 사용자 화면에 UI가 표기되기 때문에 Client측에서 리액트가 렌더링 됨
 - React와 Gatsby 또는 Next.js 프레임워크를 함께 사용하면 SSG(Static Site Generation)과 SSR을 함께 구현할 수도 있음
 
-### 컴포넌트
+## 컴포넌트
 - UI를 component들 단위로 보여주고 이벤트에 반응도록 만들어나가는 라이브러리
 - 응집도가 높은 UI 블락이면서 다른 컴포넌드들과는 연결되어 있지 않고 독립적인 응집도를 유지하고있는 빌딩 블록
   (A highly cohesive building block for UIs loosely coupled with other components)
@@ -68,20 +68,56 @@
 node -v
 npm -v
 git --version
-corepack enable
+corepack enable // yarn 설치
 yarn -v
 ```
 </div>
 </details>
 
 <details>
-<summary>ETC</summary>
+<summary>3. NodeJS</summary>
+<div markdown="1">
+
+## 노드JS
+- 자바스크립트를 브라우저 밖에서 실행할 수 있게 해주는 자바스크립트 실행환경
+- 컴퓨터에서 스크립트를 작성하거나 서버를 만들 때도 자바스크립트를 활용 가능
+- server-side rendering, command line tools 또는 back-end까지 js로 만들 수 있음
+
+#### 01. npm
+- NodeJS를 설치하면 자동으로 설치되는 패키지 매니저
+- 프로젝트를 만들 때, 우리가 만드는 코드 뿐만 아니라 외부 dependencies(라이브러리)를 가져와서 쉽게 설치하고 버전을 관리할 수 있게 함
+- package.json : 프로젝트 이름, 버전, 모든 외부 라이브러리 디펜던씨 명시 및 관리
+
+#### 02. npx
+- npm이 설치될 때, 함께 설치됨
+- npm은 패키지를 관리한다면, npx는 패키지들을 개별적으로 실행할 수 있게 도와주는 tool
+
+#### 03. yarn
+- npm을 대체해서 사용 가능한 패키지 매니저 (by facebook)
+- npm과 서로 호환이 가능하지만 추천되는 방식은 아니라서 일관성 있게 npm 또는 yarn 한가지만 일관성있게 고정적으로 사용
+- npm에서 살짝 부족한 단점을 커버하기 위해 만들어짐
+- npm은 사용하는 라이브러리가 많을 수록 프로젝트를 실행하는 속도가 현저히 떨어짐, 필요한 라이브러리를 순차적으로 설치하고 실행하기 때문
+- yarn은 필요한 라이브러리를 병렬적으로 동시에 설치하고 실행, 보완관련 측면에서도 뛰어남
+- fater, consistent, and secure 빠르고, 일관성있고 안전
+
+</div>
+</details>
+
+<details>
+<summary>4. 프로젝트 시작</summary>
+<div markdown="1">
+
+</div>
+</details>
+
+<details>
+<summary>Bookmarks</summary>
 <div markdown="1">
 
 | Plugin | URL |
 | ------ | ------ |
-| React 공식사이트 | https://reactjs.org/ |
 | React 배타문서 | https://beta.reactjs.org/ |
+| React 공식사이트 | https://reactjs.org/ |
 | Create React App | https://create-react-app.dev/ |
 | HTML to JSX | https://transform.tools/html-to-jsx |
 | CSS - BoxShadow | https://cssgenerator.org/box-shadow-css-generator.html |
