@@ -104,8 +104,31 @@ yarn -v
 </details>
 
 <details>
-<summary>4. 프로젝트 시작</summary>
+<summary>4. 프로젝트 구조</summary>
 <div markdown="1">
+
+1) /.yarn : yarn을 실행하기 위해 필요한 것들
+2) /node_modules : npm을 이용해서 설치한 라이브러리들
+3) .pnp(play&plug) : yarn을 이용해서 설치한 라이브러리들
+    - /node_modules 에 있는 파일 빌드(파일입출력)가 상당히 소모적
+    - 따라서 yarn에서는 .pnp 파일로 관리
+4) yarn.lock : 라이브러리 버전정보
+5) /public : static한 리소스
+    - manifest.json : pwa(progressive web appliction)에 필요한 정보(앱 이름, 아이콘 등)
+    - robots.txt : 웹 앱을 배포했을 때, 크롤링하는 로봇들에게 사이트에 대한 정보를 명시
+6) /src : 작성하는 코드들
+    - reportWebVitals.js : 웹 성능 측정
+    - setupTests.js : 유닛테스트
+7) package.json : 프로젝트 전반적인 정보 및 스크립트
+    - name : 프로젝트 이름
+    - version : 프로젝트 정보
+    - private : private or public
+    - dependencies : 라이브러리에 대한 정보를 확인
+    - scripts : create react-app 으로 설치되었을 경우 사용가능한 명령어
+    - eslintConfig : eslintConfig
+    - browserslist : 브라우저 정보
+      - production : 배포할 때, 어떤 버전까지, >0.2%는 전체 브라우저 시장에서 0.2이상 사용되는 모든 브라우저 이상
+      - development : 개발할 때, 어느 버전까지 js를 변환
 
 </div>
 </details>
