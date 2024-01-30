@@ -107,28 +107,68 @@ yarn -v
 <summary>4. 프로젝트 구조</summary>
 <div markdown="1">
 
+## 프로젝트 구조
 1) /.yarn : yarn을 실행하기 위해 필요한 것들
 2) /node_modules : npm을 이용해서 설치한 라이브러리들
 3) .pnp(play&plug) : yarn을 이용해서 설치한 라이브러리들
-    - /node_modules 에 있는 파일 빌드(파일입출력)가 상당히 소모적
-    - 따라서 yarn에서는 .pnp 파일로 관리
+   - /node_modules 에 있는 파일 빌드(파일입출력)가 상당히 소모적
+   - 따라서 yarn에서는 .pnp 파일로 관리
 4) yarn.lock : 라이브러리 버전정보
 5) /public : static한 리소스
-    - manifest.json : pwa(progressive web appliction)에 필요한 정보(앱 이름, 아이콘 등)
-    - robots.txt : 웹 앱을 배포했을 때, 크롤링하는 로봇들에게 사이트에 대한 정보를 명시
+   - manifest.json : pwa(progressive web appliction)에 필요한 정보(앱 이름, 아이콘 등)
+   - robots.txt : 웹 앱을 배포했을 때, 크롤링하는 로봇들에게 사이트에 대한 정보를 명시
 6) /src : 작성하는 코드들
-    - reportWebVitals.js : 웹 성능 측정
-    - setupTests.js : 유닛테스트
+   - reportWebVitals.js : 웹 성능 측정
+   - setupTests.js : 유닛테스트
 7) package.json : 프로젝트 전반적인 정보 및 스크립트
-    - name : 프로젝트 이름
-    - version : 프로젝트 정보
-    - private : private or public
-    - dependencies : 라이브러리에 대한 정보를 확인
-    - scripts : create react-app 으로 설치되었을 경우 사용가능한 명령어
-    - eslintConfig : eslintConfig
-    - browserslist : 브라우저 정보
-      - production : 배포할 때, 어떤 버전까지, >0.2%는 전체 브라우저 시장에서 0.2이상 사용되는 모든 브라우저 이상
-      - development : 개발할 때, 어느 버전까지 js를 변환
+   - name : 프로젝트 이름
+   - version : 프로젝트 정보
+   - private : private or public
+   - dependencies : 라이브러리에 대한 정보를 확인
+   - scripts : create react-app 으로 설치되었을 경우 사용가능한 명령어
+   - eslintConfig : eslintConfig
+   - browserslist : 브라우저 정보
+     - production : 배포할 때, 어떤 버전까지, >0.2%는 전체 브라우저 시장에서 0.2이상 사용되는 모든 브라우저 이상
+     - development : 개발할 때, 어느 버전까지 js를 변환
+
+## 숨겨진 툴
+- create react-app을 통해서 프로젝트를 만들면 scripts(package.json)에는 start, build, test, eject가 있고, yarn.lock 파일에는 무언가 많이 설치가 되어 있고 사용되어 있는 것을 확인 가능
+- 설치되어 있는 것을 일일이 하나하나 설정을 바꾸고 싶다면 eject을 사용하면 되지만 한번 eject한 경우에는 다시 포장이 불가
+```sh
+yarn eject
+? Are you sure you want to eject? This action is permanent.
+Y
+```
+- package.json 파일 dependencies에 즉각적으로 숨겨져있던 툴들이 표기됨
+  - babel, webpack 등 라이브러리 등
+    - css를 축약하는 웹팩, 환경변수 설정, eslint(코드를 잘 작성하는지 감시) 등
+
+## 중요한 툴
+
+#### 1. Babel
+- 바벨은 자바스크립트 트랜스컴파일러(JavaScript transcompiler)
+- 대부분의 사용자들은 최신 브라우저 버전을 사용하지만, 아직까지도 예전 브라우저 버전을 사용하거나 최신 JS문법을 지원하지 않는 브라우저를 사용할 수도 있음
+- 리액트를 개발할 때, 최신 자바스크립트 문법을 사용해도 바벨을 이용해서 프로젝트를 빌드할 때, 사용자에게 배포 전 최신 문법을 예전 버전으로 변환해주는 작업을 해줌
+- 사용자의 브라우저 버전을 걱정하지 않고 마음껏 최신 버전으로 개발하거나 TS, JSX로 프로그래밍을 할 수 있는 것이 바벨의 역할으로 예전 JS 버전으로 변환
+
+#### 2. Webpack
+- Bundling the code, JavaScript module bundler
+- 코드를 잘 번들링(포장)해서 사용자에게 배포할 수 있게 도와주는 모듈 번들러
+- 프로젝트를 많은 파일들을(js, sass, hbs, cjs jpg, png 등) 웹팩을 통해서 사용자 전송
+  - html, 이미지 파일들 등 어떤 것들을 그룹을 지어서 처음으로 사용자에게 전송해야 하는지 번들링 해줌
+  - create react-app을 사용할 때 기본적인 설정을 해줌
+  - 번들링 이외에도 쓰이지 않는 코드는 삭제하고 코드를 압축하고 코멘트를 제거해서 사용자에게 전달
+  - css파일 이름을 축약한 버전으로 만들어서 파일 사이즈를 줄여줌
+
+#### 3. ESLint
+- 코드를 올바르게 작성하고 있는지 체크하는 역할
+
+#### 4. Jest
+- 유닛 테스트를 작성하고, 코드가 원하는 대로 동작하는지 테스팅하는 프레임워크
+
+#### 5. PostCSS
+- expandable CSS libraries
+- tool for transforming CSS with JavaScript
 
 </div>
 </details>
