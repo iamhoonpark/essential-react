@@ -1,21 +1,5 @@
 # 리액트
 
-
-<details>
-<summary>Bookmarks</summary>
-<div markdown="1">
-
-| Plugin | URL |
-| ------ | ------ |
-| React 배타문서 | https://beta.reactjs.org/ |
-| React 공식사이트 | https://reactjs.org/ |
-| Create React App | https://create-react-app.dev/ |
-| HTML to JSX | https://transform.tools/html-to-jsx |
-| CSS - BoxShadow | https://cssgenerator.org/box-shadow-css-generator.html |
-| 리액트 개발툴 익스텐션 | https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi |
-</div>
-</details>
-
 <details>
 <summary>1. 리액트(React)</summary>
 <div markdown="1">
@@ -175,7 +159,6 @@ Y
   - create react-app을 사용할 때 기본적인 설정을 해줌
   - 번들링 이외에도 쓰이지 않는 코드는 삭제하고 코드를 압축하고 코멘트를 제거해서 사용자에게 전달
   - css파일 이름을 축약한 버전으로 만들어서 파일 사이즈를 줄여줌
-- 개발자도구 > network > bundle.js 파일
 
 #### 3. ESLint
 - 코드를 올바르게 작성하고 있는지 체크하는 역할
@@ -208,52 +191,16 @@ Y
 </details>
 
 <details>
-<summary>5. CSR(Client Side Render)</summary>
+<summary>Bookmarks</summary>
 <div markdown="1">
 
-## CSR(Client Side Render)
-
-> 리액트가 어떻게 브라우저에서 동작하는지 <br/>
-> Client Side Rendering이 어떤 순서대로 일어나는지
-
-- 사용자가 html을 받았을 때는 html요소에 어떤 ui(html요소들)도 확인할 수 없고 body 요소 안에는 오로지 id가 root인 div요소만 존재
-- 리액트는 CSR이기 때문에 텅빈 html document를 보내주고 작성된 코드와 리액트 코드가 함께 브라우저에 전송되면서 Client Side에서 코드가 동작하면서 작성한 코드대로 필요한 DOM요소를(UI요소를) 동적으로 다이나믹하게 생성
-
-#### 1. 동작순서
-※ Network탭: 어떤 순서대로 어떤 파일들이 다운로드 되어 브라우저에 표기되어 있는지 확인 가능
-⑴ localhost Document : html 페이지 <br/>
-⑵ bundle.js : 프로젝트를 브라우저에 보여주기 이전에 webpack이 코드*들을 압축해서 하나의 파일로 보여줌 <br/>
-　＊app코드와 리액트를 동작하기 위한 코드 <br/>
-⑶ 여러가지 정적 이미지, 파일 등
-
-#### 2. 동작원리
-- /src : 동적으로 만드는 코드를 작성하는 곳
-- index.js : 리액트의 시작점
-```sh
-// 1) ReactDOM에 createRoot라는 API를 이용해서 div를 가져와서 root를 만들어줌
-const root = ReactDOM.createRoot(document.getElementById('root'));
-
-// 2) root에다가 첫번째 컴포넌트에 렌더를 진행
-root.render(
-  <React.StrictMode>
-
-    // 3) 그게 바로 App이라는 컴포넌트
-    <App />
-
-  /* 4) App 컴포넌트는 StrictMode에 감싸져 있고 JS에서 stric mode를 활성화시키는 처럼 개발할 때, 엄격한 모드에서 개발을 해나가고, 배포할 땐, 해당 모드가 잠시 꺼진다.
-  그래서 무언가 잘못 작성하고 있다면 경고나 warning을 받아볼 수 있도록 감싸져있다. */
-  </React.StrictMode>
-
-  // 실제로 const root에 첫번째로 렌더링되는 컴포넌트는 App이다.
-);
-```
-① 따라서, 사용자가 id가 root인 div요소가 담아져있는 html을 다운로드 받고, 리액트와 소스코드를 전부 다운로드 받으면<br/>
-② 브라우저 상에서 id가 root인 요소를 찾아서 root라는 가상의 요소(const root)를 만들고<br/>
-③ 여기에 App이라는 컴포넌트를 연결해줌<br/>
-④ 그러면 react가 내부적으로 App컴포넌트를 들어가서 return되는 jsx문법을 확인한 후에<br/>
-⑤ 브라우저에서 제공하는 create-element 라는 동적으로 DOM요소를 생성하는 API를 통해서 정해진 순서대로 해당되는 태그를 동적으로 만들어줌<br/>
-⑥ 그래서 우리는 index.js에서 컴포넌트를 만들어가지 않고 App.js에서 컴포넌트 작업을 진행한다
-
-
+| Plugin | URL |
+| ------ | ------ |
+| React 배타문서 | https://beta.reactjs.org/ |
+| React 공식사이트 | https://reactjs.org/ |
+| Create React App | https://create-react-app.dev/ |
+| HTML to JSX | https://transform.tools/html-to-jsx |
+| CSS - BoxShadow | https://cssgenerator.org/box-shadow-css-generator.html |
+| 리액트 개발툴 익스텐션 | https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi |
 </div>
 </details>
