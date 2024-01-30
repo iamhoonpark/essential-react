@@ -1,17 +1,15 @@
-import logo from './logo.svg';
 import './App.css';
 
-function App() {
+function AppPracticeJSX() {
   const name = '제이크';
+  const list = ['딸기', '바나나', '오렌지', '포도'];
   return (
     <>
-      <h1 className='orange'>Hello World</h1>
-      <h2>Hello!</h2>
-      <p>{name}</p>
+      <h1 className='orange'>{`Hello ${name}`}</h1>
       <ul>
-        <li>딸기</li>
-        <li>바나나</li>
-        <li>오렌지</li>
+        {
+          list.map((item) => (<li>{item}</li>))
+        }
       </ul>
       <img
         style={{ width: '200px', height: '200px' }}
@@ -22,4 +20,4 @@ function App() {
   );
 }
 
-export default App;
+export default AppPracticeJSX;

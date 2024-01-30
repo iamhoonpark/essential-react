@@ -14,6 +14,20 @@
 | CSS - BoxShadow | https://cssgenerator.org/box-shadow-css-generator.html |
 | 리액트 개발툴 익스텐션 | https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi |
 | 무료 사진 사이트 | https://unsplash.com/ |
+| HTML > JSX | https://transform.tools/html-to-jsx |
+
+
+
+## 단축어
+
+※ 커맨트 팔레트 > Snippets: configure user snippets > global.code-snippets.json
+
+1. rfc : react import
+2. rsi : 함수 표현식, 리턴없이 소괄호로 값을 리턴, 상태가 없는 ui요소를 반환
+3. si : import css
+4. cn : className
+
+
 </div>
 </details>
 
@@ -276,6 +290,26 @@ root.render(
   ⑶ JavaScript 코드를 작성할 때는 중괄호{}를 사용한다
     - App컴포넌트는 App.js안에 존재(basic > src > App.js > App)
     - 따라서 오브젝트{} 문법을 이용해서 자바스크립트 코드를 작성
+
+- 명명규칙
+
+  ⑴ 파일명
+  - 리액트에서는 파일명을 따로 규정하고 있지 않음
+    - ex. CamelCase, underscore 등 회사마다 다르나 보통 리액트는 CamelCase으로 파일명을 작성
+    - eg. nextjs에서는 kebab-case를 주로 사용
+  - 다만, 함수명과 export명만 동일하게 설정
+  ```sh
+    function App() {
+      ...
+    }
+    export default App;
+  ```
+
+  ⑵ 확장자명
+  - 리액트 컴포넌트라면 .jsx라고 하는 것을 더 선호
+  - 순수 js파일과 컴포넌트 js파일을 쉽게 구분 가능
+  - JavaScript로 개발한다면 .js/.jsx
+  - TypeScript로 개발한다면 .ts/.tsx
 
 ※ https://react.dev/learn/writing-markup-with-jsx
 
