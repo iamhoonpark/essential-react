@@ -17,7 +17,6 @@
 | HTML > JSX | https://transform.tools/html-to-jsx |
 
 
-
 ## 단축어
 
 ※ 커맨트 팔레트 > Snippets: configure user snippets > global.code-snippets.json
@@ -295,8 +294,8 @@ root.render(
 
   ⑴ 파일명
   - 리액트에서는 파일명을 따로 규정하고 있지 않음
-    - ex. CamelCase, underscore 등 회사마다 다르나 보통 리액트는 CamelCase으로 파일명을 작성
-    - eg. nextjs에서는 kebab-case를 주로 사용
+    - e.x. CamelCase, underscore 등 회사마다 다르나 보통 리액트는 CamelCase으로 파일명을 작성
+    - e.g. nextjs에서는 kebab-case를 주로 사용
   - 다만, 함수명과 export명만 동일하게 설정
   ```sh
     function App() {
@@ -312,6 +311,12 @@ root.render(
   - TypeScript로 개발한다면 .ts/.tsx
 
 ※ https://react.dev/learn/writing-markup-with-jsx
+
+## /basic
+- React는 컴포넌트 들의 집합체이고
+- 컴포넌트들을 재사용가능하고 외부상태에 고립되어 있는 독립된 하나의 단위로 만들어나가는 것이 중요하다
+- 처음부터 완벽한 컴포넌트를 만드려고 하지 말고, 만들다가 재사용 가능한 작은 단위가 생기면 다시 잘게 만들면 됨
+- e.g. Profile.jsx → Avatar.jsx
 
 </div>
 </details>

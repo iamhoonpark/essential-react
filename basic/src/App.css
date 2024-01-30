@@ -9,12 +9,32 @@
   background-color: #ebebeb;
   border-radius: 20px;
   box-shadow: 2px 3px 9px 0px rgba(0,0,0,0.30);
--webkit-box-shadow: 2px 3px 9px 0px rgba(0,0,0,0.30);
--moz-box-shadow: 2px 3px 9px 0px rgba(0,0,0,0.30);
+  -webkit-box-shadow: 2px 3px 9px 0px rgba(0,0,0,0.30);
+  -moz-box-shadow: 2px 3px 9px 0px rgba(0,0,0,0.30);
+  margin-bottom: 1rem;
 }
 
 .photo {
   width: 200px;
   height: 200px;
   border-radius: 100%;
+}
+
+.avatar {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  margin: auto;
+}
+
+.new {
+  position: absolute;
+  top: 10%;
+  left: 70%;
+  width: 50px;
+  background-color: aquamarine;
+  padding: 0.2rem 0.5rem;
+  border-radius: 0.5rem;
+  text-transform: uppercase;
+  font-weight: bold;
 }
