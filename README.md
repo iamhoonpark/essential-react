@@ -170,6 +170,23 @@ Y
 - expandable CSS libraries
 - tool for transforming CSS with JavaScript
 
+## 설치 익스텐션
+| VSCode Extentions | DETAILS |
+| ------ | ------ |
+| Material Theme | 현재 사용하고 있는 테마(dark) |
+| Material Icon Theme | 현재 사용하고 있는 아이콘들 |
+| Auto Import | 자동으로 import 해줌 |
+| Prettier - Code formatter | 코드를 이쁘게 포맷  |
+| CSS Modules | 나중에 PostCSS 쓸때 유용함 |
+
+| HTML·CSS Extentions |
+| ------ |
+| IntelliSense for CSS class names in HTML |
+| HTML to CSS autocompletion |
+| HTML CSS Support |
+| CSS Peek |
+| Auto Rename Tag |
+
 </div>
 </details>
 
@@ -184,5 +201,6 @@ Y
 | Create React App | https://create-react-app.dev/ |
 | HTML to JSX | https://transform.tools/html-to-jsx |
 | CSS - BoxShadow | https://cssgenerator.org/box-shadow-css-generator.html |
+| 리액트 개발툴 익스텐션 | https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi |
 </div>
 </details>
