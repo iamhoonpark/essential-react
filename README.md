@@ -13,6 +13,7 @@
 | HTML to JSX | https://transform.tools/html-to-jsx |
 | CSS - BoxShadow | https://cssgenerator.org/box-shadow-css-generator.html |
 | 리액트 개발툴 익스텐션 | https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi |
+| 무료 사진 사이트 | https://unsplash.com/ |
 </div>
 </details>
 
@@ -220,10 +221,10 @@ Y
 - 리액트는 CSR이기 때문에 텅빈 html document를 보내주고 작성된 코드와 리액트 코드가 함께 브라우저에 전송되면서 Client Side에서 코드가 동작하면서 작성한 코드대로 필요한 DOM요소를(UI요소를) 동적으로 다이나믹하게 생성
 
 #### 1. 동작순서
-※ Network탭: 어떤 순서대로 어떤 파일들이 다운로드 되어 브라우저에 표기되어 있는지 확인 가능
-⑴ localhost Document : html 페이지 <br/>
-⑵ bundle.js : 프로젝트를 브라우저에 보여주기 이전에 webpack이 코드*들을 압축해서 하나의 파일로 보여줌 <br/>
-　＊app코드와 리액트를 동작하기 위한 코드 <br/>
+※ Network탭: 어떤 순서대로 어떤 파일들이 다운로드 되어 브라우저에 표기되어 있는지 확인 가능<br/>
+⑴ localhost Document : html 페이지<br/>
+⑵ bundle.js : 프로젝트를 브라우저에 보여주기 이전에 webpack이 코드*들을 압축해서 하나의 파일로 보여줌<br/>
+　＊app코드와 리액트를 동작하기 위한 코드<br/>
 ⑶ 여러가지 정적 이미지, 파일 등
 
 #### 2. 동작원리
@@ -254,6 +255,29 @@ root.render(
 ⑤ 브라우저에서 제공하는 create-element 라는 동적으로 DOM요소를 생성하는 API를 통해서 정해진 순서대로 해당되는 태그를 동적으로 만들어줌<br/>
 ⑥ 그래서 우리는 index.js에서 컴포넌트를 만들어가지 않고 App.js에서 컴포넌트 작업을 진행한다
 
+</div>
+</details>
+
+<details>
+<summary>6.문법정리</summary>
+<div markdown="1">
+
+> - 리액트 컴포넌트는 함수형태로 만들고 함수명은 대문자로 시작하며 반환(return)하는 것은 컴포넌트가 어떻게 ui를 표기할 것인지 명시하는 JSX문법을 사용 <br/>
+> - 그리고 외부로부터 데이터를 주입받는 props와 각각의 컴포넌트 그 상태를 가지고 있는 state가 있음
+
+## JSX
+- JSX(JavaScript XML)는 기존 html을 작성하는 것과 동일하지만 유의사항 3가지<br/>
+  ⑴ JSX를 반환할 때는 단 하나의 태그로만 반환 가능<br/>
+    - 스타일링을 하거나 부모의 태그가 필요한 것이아니라 다수의 태그를 감싸는 역할만 하고 싶다면 텅텅빈 ```<></>``` 태그만 반환하면 된다<br/>
+    - 해당 ```<></>``` 태그는 리액트 내부에서 ```<Fragment></Fragment>```라는 태그를 사용<br/>
+
+  ⑵ html에서는 class라는 속성을 사용하지만, JSX에서는 className를 사용<br/>
+
+  ⑶ JavaScript 코드를 작성할 때는 중괄호{}를 사용한다
+    - App컴포넌트는 App.js안에 존재(basic > src > App.js > App)
+    - 따라서 오브젝트{} 문법을 이용해서 자바스크립트 코드를 작성
+
+※ https://react.dev/learn/writing-markup-with-jsx
 
 </div>
 </details>
