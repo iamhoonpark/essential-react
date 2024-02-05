@@ -312,11 +312,46 @@ root.render(
 
 ※ https://react.dev/learn/writing-markup-with-jsx
 
-## /basic
+#### 정리
 - React는 컴포넌트 들의 집합체이고
 - 컴포넌트들을 재사용가능하고 외부상태에 고립되어 있는 독립된 하나의 단위로 만들어나가는 것이 중요하다
 - 처음부터 완벽한 컴포넌트를 만드려고 하지 말고, 만들다가 재사용 가능한 작은 단위가 생기면 다시 잘게 만들면 됨
 - e.g. Profile.jsx → Avatar.jsx
+
+## 이벤트처리
+
+#### 1. 이벤트리스너
+```sh
+  // 1) 함수정의 방법
+  <button onClick={function() {}}>버튼</button>
+
+  // 2) 화살표함수 방법
+  <button onClick={() => {}}>버튼</button>
+
+  // 3) 함수표현식 방법
+  function AppProfile() {
+    const handleClick = (event) => {
+      console.log(event);
+    };
+    return (
+      <>
+        <button onClick={handleClick}>버튼</button>
+      </>
+    );
+  }
+```
+- 🔺(주의) onClick 이벤트 리스너에 변수의 참조값만 전달해주면 클릭이 발생했을 때, 변수 handleClick이 참조하고 있는 함수를 호출하게 됨 → 정상작동
+- 그러나 많은 사람들이 실수하는 것이 소괄호까지 붙이게되면 e.g. handleClick() 렌더 즉, return이 호출되는 시점에 handleClick을 호출하여 함수가 다 실행이 되고 그게 반환된 값(console.log(event))가 onClick에 할당됨
+- 함수를 실행한 값이 할당되는 것을 원하는 것이 아니라, onClick이 되었을 때, 함수를 연결하고 싶은 것
+- 따라서, 함수의 참조값인 함수의 이름을 전달해야 하고 함수를 호출하면 안됨
+
+#### 2. event 객체
+```sh
+  onClick={ (event) => {console.log(event)} }
+```
+- SyntheticBaseEvent: 브라우저에서 발생하는 이벤트를 리액트에서 처리할 수 있도록 한단계 감싼 후 객체를 만들어서 이벤트리스너에 전달
+
+※ https://legacy.reactjs.org/docs/handling-events.html
 
 </div>
 </details>
