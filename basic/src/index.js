@@ -6,11 +6,13 @@ import AppProfile from './basic/AppProfile';
 import AppCounter from './basic/AppCounter';
 import AppProducts from './basic/AppProducts';
 import AppXY from './AppXY';
+import AppMentor from './AppMentor';
+import AppMentors from './AppMentors';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <AppXY />
+    <AppMentors />
   </React.StrictMode>
 );
 
