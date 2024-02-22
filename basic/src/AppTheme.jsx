@@ -6,6 +6,7 @@ export default function AppTheme() {
     return (
         /**
          * 4) 어플리케이션 전체에 사용
+         *    - 그러나, Footer에만 사용하고 싶다면 Footer 위에만 감싸서 사용 가능
          */
         <DarkModeProvider>
             <Header />
