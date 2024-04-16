@@ -1,25 +1,26 @@
-import React, { useMemo, useReducer, useState } from 'react';
+import React, { useCallback, useMemo, useReducer, useState } from 'react';
 import personReducer from './reducer/person-reducer';
+import { memo } from 'react';
 
 export default function AppMentorsButton() {
     const [person, dispatch] = useReducer(personReducer, initialPerson);
 
-    const handleUpdate = () => {
+    const handleUpdate = useCallback(() => {
         const prev = prompt('누구의 이름을 바꾸고 싶은가요?');
         const current = prompt('변경할 이름을 입력해주세요.');
         dispatch({type: 'updated', prev, current});
-    };
+    }, []);
 
-    const handleAdd = () => {
+    const handleAdd = useCallback(() => {
         const name = prompt('추가할 이름을 입력해주세요.');
         const title = prompt('해당 멘토의 직함은?');
         dispatch({type: 'added', name, title});
-    };
+    }, []);
 
-    const handleDelete = () => {        
+    const handleDelete = useCallback(() => {
         const name = prompt('삭제할 이름을 입력해주세요.');   
         dispatch({type: 'deleted', name});
-    };
+    }, []);
 
     return (
         <div>
@@ -46,7 +47,7 @@ export default function AppMentorsButton() {
     );
 }
 
-function Button({ text, onClick }) {
+const Button = memo(({ text, onClick }) => {
     console.log('Button', text, 're-rendering 😜');
     const result = useMemo(() => calculateSomething(), []);
     return (
@@ -62,7 +63,7 @@ function Button({ text, onClick }) {
             {`${text} ${result}`}
         </button>
     );
-}
+});
 
 function calculateSomething() {
     for (let i = 0; i < 10000; i++) {
