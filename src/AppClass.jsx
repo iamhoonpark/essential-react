@@ -1,6 +1,7 @@
 import React from 'react';
 import Counter from './basic/components/Counter';
 
+// barnch 생성 및 머지 테스트 작업
 export default class AppClass extends React.Component {
   state = { count: 0 };
 
